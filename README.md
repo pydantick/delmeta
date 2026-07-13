@@ -9,6 +9,14 @@
 
 ## Установка
 
+Одной командой (поставит exiftool и функцию):
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/pydantick/delmeta/main/install.sh | sh
+```
+
+Или вручную:
+
 ```sh
 brew install exiftool
 cp delmeta.fish ~/.config/fish/functions/
