@@ -7,22 +7,34 @@
 - **встроенные** метаданные — EXIF/GPS/IPTC/XMP, а также PDF, видео, аудио (через `exiftool`);
 - **macOS extended attributes** — `quarantine`, «откуда скачан» (`kMDItemWhereFroms`), Finder-теги и комментарии.
 
+Основная версия — для **zsh**. Есть также версия для **fish**.
+
 ## Установка
 
-Одной командой (поставит exiftool и функцию):
+Одной командой (поставит exiftool и zsh-версию; fish-версию — если есть fish):
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/pydantick/delmeta/main/install.sh | sh
 ```
 
-Или вручную:
+### Вручную — zsh
+
+```sh
+brew install exiftool
+mkdir -p ~/.config/delmeta
+cp delmeta.zsh ~/.config/delmeta/
+echo 'source ~/.config/delmeta/delmeta.zsh' >> ~/.zshrc
+# перезапусти терминал или:  source ~/.zshrc
+```
+
+### Вручную — fish
 
 ```sh
 brew install exiftool
 cp delmeta.fish ~/.config/fish/functions/
 ```
 
-Fish подхватит функцию автоматически, перезапуск не нужен.
+Fish подхватит функцию сам, перезапуск не нужен.
 
 ## Использование
 
